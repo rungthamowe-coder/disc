@@ -32,283 +32,70 @@
     padding: 32px 16px;
   }
 
-  .container {
-    width: 100%;
-    max-width: 680px;
-  }
+  .container { width: 100%; max-width: 680px; }
 
-  /* ── Header ─────────────────────────────────────── */
-  .header {
-    text-align: center;
-    margin-bottom: 28px;
-  }
-  .header h1 {
-    font-size: 1.7rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-  }
-  .header p {
-    color: var(--muted);
-    margin-top: 6px;
-    font-size: 0.95rem;
-  }
-  .disc-badges {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 14px;
-  }
-  .badge {
-    width: 38px; height: 38px;
-    border-radius: 50%;
-    color: #fff;
-    font-weight: 800;
-    font-size: 1rem;
-    display: flex; align-items: center; justify-content: center;
-  }
+  .header { text-align: center; margin-bottom: 28px; }
+  .header h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px; }
+  .header p { color: var(--muted); margin-top: 6px; font-size: 0.95rem; }
+  .disc-badges { display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
+  .badge { width: 38px; height: 38px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 1rem; display: flex; align-items: center; justify-content: center; }
   .badge-D { background: var(--D); }
   .badge-I { background: var(--I); }
   .badge-S { background: var(--S); }
   .badge-C { background: var(--C); }
 
-  /* ── Card ────────────────────────────────────────── */
-  .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 32px;
-    margin-bottom: 20px;
-  }
+  .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 20px; }
 
-  /* ── Name Screen ─────────────────────────────────── */
-  #screen-name .card {
-    text-align: center;
-  }
-  #screen-name h2 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-  }
-  #screen-name p {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-bottom: 24px;
-    line-height: 1.6;
-  }
-  .input-group {
-    display: flex;
-    gap: 12px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .name-input {
-    width: 100%;
-    max-width: 380px;
-    padding: 14px 18px;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.2s;
-    font-family: inherit;
-  }
+  #screen-name .card { text-align: center; }
+  #screen-name h2 { font-size: 1.2rem; margin-bottom: 8px; }
+  #screen-name p { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; line-height: 1.6; }
+
+  .input-group { display: flex; gap: 12px; flex-direction: column; align-items: center; }
+  .name-input { width: 100%; max-width: 380px; padding: 14px 18px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; outline: none; transition: border-color 0.2s; font-family: inherit; }
   .name-input:focus { border-color: var(--C); }
 
-  /* ── Buttons ─────────────────────────────────────── */
-  .btn {
-    padding: 13px 32px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.15s, transform 0.1s;
-    font-family: inherit;
-  }
+  .btn { padding: 13px 32px; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.15s, transform 0.1s; font-family: inherit; }
   .btn:hover { opacity: 0.88; transform: translateY(-1px); }
   .btn:active { transform: translateY(0); }
   .btn-primary { background: var(--C); color: #fff; }
-  .btn-outline {
-    background: transparent;
-    border: 2px solid var(--border);
-    color: var(--text);
-    padding: 11px 20px;
-    font-size: 0.92rem;
-  }
+  .btn-outline { background: transparent; border: 2px solid var(--border); color: var(--text); padding: 11px 20px; font-size: 0.92rem; }
 
-  /* ── Quiz Screen ─────────────────────────────────── */
-  .progress-bar-wrap {
-    background: var(--border);
-    border-radius: 99px;
-    height: 8px;
-    margin-bottom: 24px;
-    overflow: hidden;
-  }
-  .progress-bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--C), #5DADE2);
-    border-radius: 99px;
-    transition: width 0.4s ease;
-  }
-  .q-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  .q-number {
-    font-size: 0.82rem;
-    color: var(--muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .q-counter {
-    font-size: 0.82rem;
-    color: var(--muted);
-  }
-  .q-text {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    line-height: 1.55;
-  }
-  .options-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .option {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 18px;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: border-color 0.15s, background 0.15s;
-    user-select: none;
-  }
+  .progress-bar-wrap { background: var(--border); border-radius: 99px; height: 8px; margin-bottom: 24px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--C), #5DADE2); border-radius: 99px; transition: width 0.4s ease; }
+
+  .q-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .q-number { font-size: 0.82rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .q-counter { font-size: 0.82rem; color: var(--muted); }
+  .q-text { font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; line-height: 1.55; }
+
+  .options-list { display: flex; flex-direction: column; gap: 10px; }
+  .option { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 2px solid var(--border); border-radius: 10px; cursor: pointer; transition: border-color 0.15s, background 0.15s; user-select: none; }
   .option:hover { border-color: #A9C9E8; background: #F0F7FF; }
-  .option.selected {
-    border-color: var(--C);
-    background: #EBF4FB;
-  }
-  .option-key {
-    width: 30px; height: 30px;
-    border-radius: 8px;
-    background: var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-    transition: background 0.15s, color 0.15s;
-  }
+  .option.selected { border-color: var(--C); background: #EBF4FB; }
+  .option-key { width: 30px; height: 30px; border-radius: 8px; background: var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; transition: background 0.15s, color 0.15s; }
   .option.selected .option-key { background: var(--C); color: #fff; }
   .option-text { font-size: 0.97rem; line-height: 1.4; }
 
-  .q-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 24px;
-  }
-  .answered-count {
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
+  .q-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; }
+  .answered-count { font-size: 0.85rem; color: var(--muted); }
 
-  /* ── Results Screen ──────────────────────────────── */
-  .result-hero {
-    text-align: center;
-    padding-bottom: 8px;
-  }
-  .result-name {
-    font-size: 1.05rem;
-    color: var(--muted);
-    margin-bottom: 4px;
-  }
-  .result-type {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 6px;
-  }
-  .result-subtitle {
-    font-size: 1rem;
-    color: var(--muted);
-    margin-bottom: 24px;
-  }
+  .result-hero { text-align: center; padding-bottom: 8px; }
+  .result-name { font-size: 1.05rem; color: var(--muted); margin-bottom: 4px; }
 
   .score-bars { margin-top: 8px; }
-  .score-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-  .score-label {
-    width: 24px;
-    font-weight: 800;
-    font-size: 1rem;
-  }
-  .score-bar-track {
-    flex: 1;
-    background: var(--border);
-    border-radius: 99px;
-    height: 22px;
-    overflow: hidden;
-    position: relative;
-  }
-  .score-bar-inner {
-    height: 100%;
-    border-radius: 99px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
-    transition: width 1s cubic-bezier(.22,.68,0,1.2);
-    min-width: 30px;
-  }
-  .score-bar-inner span {
-    color: #fff;
-    font-size: 0.78rem;
-    font-weight: 700;
-  }
-  .score-num {
-    width: 28px;
-    text-align: right;
-    font-weight: 700;
-    font-size: 0.95rem;
-  }
+  .score-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .score-label { width: 24px; font-weight: 800; font-size: 1rem; }
+  .score-bar-track { flex: 1; background: var(--border); border-radius: 99px; height: 22px; overflow: hidden; }
+  .score-bar-inner { height: 100%; border-radius: 99px; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; transition: width 1s cubic-bezier(.22,.68,0,1.2); min-width: 30px; }
+  .score-bar-inner span { color: #fff; font-size: 0.78rem; font-weight: 700; }
+  .score-num { width: 28px; text-align: right; font-weight: 700; font-size: 0.95rem; }
 
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 24px 0;
-  }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 
-  .profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  .profile-card {
-    border-radius: 10px;
-    padding: 16px;
-    border-left: 4px solid;
-  }
-  .profile-card h4 {
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-  }
-  .profile-card ul {
-    list-style: none;
-    font-size: 0.88rem;
-    line-height: 1.7;
-    color: var(--text);
-  }
+  .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .profile-card { border-radius: 10px; padding: 16px; border-left: 4px solid; }
+  .profile-card h4 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .profile-card ul { list-style: none; font-size: 0.88rem; line-height: 1.7; color: var(--text); }
   .profile-card ul li::before { content: "• "; opacity: 0.5; }
 
   .D-card { border-color: var(--D); background: #FEF0EF; }
@@ -320,53 +107,20 @@
   .S-card h4 { color: var(--S); }
   .C-card h4 { color: var(--C); }
 
-  .highlight-card {
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-  }
-  .highlight-card .type-initial {
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .highlight-card .type-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-  .highlight-card .type-desc {
-    font-size: 0.88rem;
-    line-height: 1.6;
-    opacity: 0.85;
-  }
+  .highlight-card { border-radius: 12px; padding: 20px; text-align: center; }
+  .highlight-card .type-initial { font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+  .highlight-card .type-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+  .highlight-card .type-desc { font-size: 0.88rem; line-height: 1.6; opacity: 0.85; }
 
-  .unanswered-warning {
-    background: #FFF3CD;
-    border: 1px solid #FFCC00;
-    border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 0.88rem;
-    color: #856404;
-    margin-top: 10px;
-    display: none;
-  }
+  .unanswered-warning { background: #FFF3CD; border: 1px solid #FFCC00; border-radius: 8px; padding: 12px 16px; font-size: 0.88rem; color: #856404; margin-top: 10px; }
 
-  .btn-restart {
-    display: block;
-    margin: 0 auto;
-    background: var(--border);
-    color: var(--text);
-    border: none;
-    border-radius: 10px;
-    padding: 12px 28px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.15s;
-    font-family: inherit;
-  }
+  /* Saving indicator */
+  .save-status { text-align: center; font-size: 0.85rem; margin-top: 12px; padding: 8px; border-radius: 8px; }
+  .save-status.saving { background: #EBF4FB; color: var(--C); }
+  .save-status.saved { background: #EEF9F3; color: var(--S); }
+  .save-status.error { background: #FEF0EF; color: var(--D); }
+
+  .btn-restart { display: block; margin: 0 auto; background: var(--border); color: var(--text); border: none; border-radius: 10px; padding: 12px 28px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: opacity 0.15s; font-family: inherit; }
   .btn-restart:hover { opacity: 0.75; }
 
   .screen { display: none; }
@@ -381,7 +135,6 @@
 <body>
 <div class="container">
 
-  <!-- Header -->
   <div class="header">
     <div class="disc-badges">
       <div class="badge badge-D">D</div>
@@ -393,7 +146,7 @@
     <p>เลือกคำตอบที่ตรงกับพฤติกรรมของคุณมากที่สุด</p>
   </div>
 
-  <!-- Screen 1: Name Entry -->
+  <!-- Screen 1: Name -->
   <div id="screen-name" class="screen active">
     <div class="card">
       <h2>ยินดีต้อนรับ</h2>
@@ -425,7 +178,7 @@
         <span class="answered-count" id="answered-count"></span>
         <button class="btn btn-primary" id="btn-next" onclick="nextOrSubmit()">ถัดไป →</button>
       </div>
-      <div id="submit-warning" class="unanswered-warning">
+      <div id="submit-warning" class="unanswered-warning" style="display:none;">
         กรุณาตอบคำถามทุกข้อก่อนดูผลลัพธ์
       </div>
     </div>
@@ -437,6 +190,7 @@
       <div class="result-hero" id="result-hero"></div>
       <hr class="divider">
       <div class="score-bars" id="score-bars"></div>
+      <div id="save-status" class="save-status saving" style="display:none;"></div>
     </div>
     <div class="card">
       <div class="profile-grid" id="profile-detail"></div>
@@ -447,279 +201,55 @@
 </div>
 
 <script>
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbwzJ6CNr9rEZJJEVob7yXweDkizcdTsbTIQrCvqkGRIajM10Mq589xAtCQhxOpvFmGPpg/exec";
+
 const QUESTIONS = [
-  {
-    q: "Q01. เมื่อได้รับโปรเจกต์ใหม่",
-    options: [
-      "กำหนดเป้าหมายและเริ่มลงมือทันที",
-      "ชวนคนอื่นแลกเปลี่ยนไอเดียก่อน",
-      "ดูบทบาทของแต่ละคนและวิธีทำงานร่วมกัน",
-      "ศึกษาข้อมูลและวางแผนก่อนเริ่ม"
-    ]
-  },
-  {
-    q: "Q02. เมื่อข้อมูลยังไม่ครบถ้วน",
-    options: [
-      "ตัดสินใจจากข้อมูลที่มีอยู่",
-      "สอบถามความคิดเห็นจากหลายคน",
-      "รอจนมั่นใจว่าทุกฝ่ายเข้าใจตรงกัน",
-      "ค้นหาข้อมูลเพิ่มเติมก่อนตัดสินใจ"
-    ]
-  },
-  {
-    q: "Q03. เมื่อต้องเผชิญความเสี่ยง",
-    options: [
-      "พร้อมรับความเสี่ยงเพื่อให้ได้ผลลัพธ์เร็วขึ้น",
-      "มองหาโอกาสใหม่ ๆ ที่อาจเกิดขึ้น",
-      "พิจารณาผลกระทบต่อทีมก่อน",
-      "ประเมินความเสี่ยงอย่างละเอียด"
-    ]
-  },
-  {
-    q: "Q04. เมื่อมีเป้าหมายที่ท้าทาย",
-    options: [
-      "แข่งขันกับเป้าหมายอย่างจริงจัง",
-      "กระตุ้นคนรอบตัวให้ตื่นเต้นไปด้วย",
-      "ค่อย ๆ ทำอย่างต่อเนื่องจนสำเร็จ",
-      "วางแผนเป็นขั้นตอนก่อนลงมือ"
-    ]
-  },
-  {
-    q: "Q05. เมื่อเจอปัญหาที่ไม่เคยพบมาก่อน",
-    options: [
-      "ทดลองวิธีใหม่ทันที",
-      "หาแนวคิดจากคนอื่นมาประกอบ",
-      "ปรึกษาผู้มีประสบการณ์",
-      "วิเคราะห์สาเหตุของปัญหาก่อน"
-    ]
-  },
-  {
-    q: "Q06. เมื่อมีหลายงานเข้ามาพร้อมกัน",
-    options: [
-      "เลือกงานที่สำคัญที่สุดก่อน",
-      "ประสานงานกับคนที่เกี่ยวข้องทันที",
-      "ค่อย ๆ จัดการทีละเรื่อง",
-      "จัดลำดับความสำคัญอย่างเป็นระบบ"
-    ]
-  },
-  {
-    q: "Q07. ในที่ประชุม",
-    options: [
-      "ผลักดันให้เกิดข้อสรุป",
-      "แสดงความคิดเห็นอย่างกระตือรือร้น",
-      "รับฟังความคิดเห็นของทุกคน",
-      "ซักถามเพื่อให้เข้าใจครบถ้วน"
-    ]
-  },
-  {
-    q: "Q08. เมื่อต้องนำเสนอไอเดีย",
-    options: [
-      "เน้นผลลัพธ์และประโยชน์ที่ได้",
-      "ใช้ตัวอย่างและเรื่องเล่าให้คนสนใจ",
-      "เชื่อมโยงผลกระทบต่อทีม",
-      "ใช้ข้อมูลและหลักฐานสนับสนุน"
-    ]
-  },
-  {
-    q: "Q09. เมื่อไม่เห็นด้วยกับคนอื่น",
-    options: [
-      "พูดตรง ๆ ถึงมุมมองของตน",
-      "ใช้วิธีพูดคุยให้บรรยากาศผ่อนคลาย",
-      "พยายามรักษาความสัมพันธ์ไว้ก่อน",
-      "อธิบายด้วยเหตุผลและข้อเท็จจริง"
-    ]
-  },
-  {
-    q: "Q10. เมื่อได้รับคำถามที่ไม่คาดคิด",
-    options: [
-      "ตอบทันทีตามที่คิด",
-      "ใช้บทสนทนาเพื่อสำรวจความคิดของอีกฝ่าย",
-      "ใช้เวลาทำความเข้าใจคำถามก่อน",
-      "ตรวจสอบความถูกต้องก่อนตอบ"
-    ]
-  },
-  {
-    q: "Q11. เมื่อได้รับโอกาสพูดต่อหน้าคนจำนวนมาก",
-    options: [
-      "มุ่งสื่อสารประเด็นสำคัญให้ชัด",
-      "รู้สึกสนุกกับการสร้างปฏิสัมพันธ์",
-      "พูดในจังหวะที่คนฟังตามได้ง่าย",
-      "เตรียมเนื้อหาอย่างละเอียด"
-    ]
-  },
-  {
-    q: "Q12. เมื่อให้ Feedback กับเพื่อนร่วมงาน",
-    options: [
-      "บอกสิ่งที่ควรปรับปรุงอย่างตรงไปตรงมา",
-      "เริ่มจากจุดแข็งและสร้างกำลังใจ",
-      "ระวังความรู้สึกของอีกฝ่าย",
-      "ยกตัวอย่างพฤติกรรมที่สังเกตได้จริง"
-    ]
-  },
-  {
-    q: "Q13. บทบาทที่คุณมักเป็นในทีม",
-    options: [
-      "คนผลักดันให้งานเดินหน้า",
-      "คนสร้างพลังและบรรยากาศ",
-      "คนประสานงานให้ทุกคนร่วมมือกัน",
-      "คนตรวจสอบคุณภาพของงาน"
-    ]
-  },
-  {
-    q: "Q14. เมื่อเพื่อนร่วมงานต้องการความช่วยเหลือ",
-    options: [
-      "ช่วยหาทางแก้ปัญหาอย่างรวดเร็ว",
-      "เข้าไปพูดคุยและให้กำลังใจ",
-      "พร้อมช่วยเหลือเท่าที่ทำได้",
-      "ช่วยวิเคราะห์สาเหตุและทางเลือก"
-    ]
-  },
-  {
-    q: "Q15. เมื่อต้องทำงานกับคนที่แตกต่างจากคุณ",
-    options: [
-      "ปรับบทบาทเพื่อให้งานสำเร็จ",
-      "พยายามสร้างความสัมพันธ์ก่อน",
-      "ยอมรับความแตกต่างและปรับตัว",
-      "ทำความเข้าใจวิธีคิดของเขาก่อน"
-    ]
-  },
-  {
-    q: "Q16. เมื่อทีมมีความขัดแย้ง",
-    options: [
-      "ตัดสินใจเพื่อให้งานเดินต่อ",
-      "ลดความตึงเครียดของบรรยากาศ",
-      "หาจุดที่ทุกฝ่ายยอมรับได้",
-      "แยกข้อเท็จจริงออกจากอารมณ์"
-    ]
-  },
-  {
-    q: "Q17. คุณชอบทำงานในทีมที่",
-    options: [
-      "ตัดสินใจรวดเร็ว",
-      "เปิดกว้างและมีพลัง",
-      "ร่วมมือกันดีและไว้ใจกัน",
-      "มีระบบและความชัดเจน"
-    ]
-  },
-  {
-    q: "Q18. เมื่อมีสมาชิกใหม่เข้าทีม",
-    options: [
-      "มอบหมายเป้าหมายให้ชัด",
-      "ชวนเข้าร่วมกิจกรรมกับทีม",
-      "ช่วยให้เขาปรับตัวได้ง่ายขึ้น",
-      "อธิบายขั้นตอนและวิธีทำงาน"
-    ]
-  },
-  {
-    q: "Q19. เมื่อองค์กรประกาศการเปลี่ยนแปลง",
-    options: [
-      "สนใจผลลัพธ์ที่จะเกิดขึ้น",
-      "มองหาโอกาสใหม่ ๆ",
-      "คิดถึงผลกระทบต่อผู้คน",
-      "อยากทราบรายละเอียดและเหตุผล"
-    ]
-  },
-  {
-    q: "Q20. เมื่อต้องเรียนรู้สิ่งใหม่",
-    options: [
-      "เริ่มทดลองใช้งานทันที",
-      "แลกเปลี่ยนกับคนที่มีประสบการณ์",
-      "เรียนรู้ไปพร้อมกับคนอื่น",
-      "ศึกษาคู่มือหรือข้อมูลก่อน"
-    ]
-  },
-  {
-    q: "Q21. สภาพแวดล้อมการทำงานที่คุณชอบ",
-    options: [
-      "มีเป้าหมายชัดและท้าทาย",
-      "มีปฏิสัมพันธ์กับผู้คนมาก",
-      "มั่นคงและร่วมมือกันดี",
-      "เป็นระบบและมีมาตรฐาน"
-    ]
-  },
-  {
-    q: "Q22. เมื่อได้รับอิสระในการทำงาน",
-    options: [
-      "ชอบตัดสินใจเอง",
-      "ชอบมีโอกาสสร้างสรรค์สิ่งใหม่",
-      "ชอบทำงานร่วมกับคนที่ไว้ใจได้",
-      "ชอบกำหนดวิธีทำงานอย่างเป็นระบบ"
-    ]
-  },
-  {
-    q: "Q23. หากต้องเลือกระหว่าง \"เร็ว\" กับ \"ละเอียด\"",
-    options: [
-      "เลือกเร็วเพื่อให้งานเดินหน้า",
-      "เลือกสิ่งที่ช่วยสร้างโอกาสใหม่",
-      "เลือกทางที่ทุกคนทำงานร่วมกันได้ดี",
-      "เลือกความถูกต้องและคุณภาพ"
-    ]
-  },
-  {
-    q: "Q24. สิ่งที่ทำให้คุณภูมิใจที่สุดในการทำงาน",
-    options: [
-      "บรรลุเป้าหมายที่ยาก",
-      "สร้างแรงบันดาลใจให้ผู้อื่น",
-      "ช่วยให้ทีมประสบความสำเร็จ",
-      "ส่งมอบงานที่มีคุณภาพสูง"
-    ]
-  }
+  { q: "Q01. เมื่อได้รับโปรเจกต์ใหม่", options: ["กำหนดเป้าหมายและเริ่มลงมือทันที","ชวนคนอื่นแลกเปลี่ยนไอเดียก่อน","ดูบทบาทของแต่ละคนและวิธีทำงานร่วมกัน","ศึกษาข้อมูลและวางแผนก่อนเริ่ม"] },
+  { q: "Q02. เมื่อข้อมูลยังไม่ครบถ้วน", options: ["ตัดสินใจจากข้อมูลที่มีอยู่","สอบถามความคิดเห็นจากหลายคน","รอจนมั่นใจว่าทุกฝ่ายเข้าใจตรงกัน","ค้นหาข้อมูลเพิ่มเติมก่อนตัดสินใจ"] },
+  { q: "Q03. เมื่อต้องเผชิญความเสี่ยง", options: ["พร้อมรับความเสี่ยงเพื่อให้ได้ผลลัพธ์เร็วขึ้น","มองหาโอกาสใหม่ ๆ ที่อาจเกิดขึ้น","พิจารณาผลกระทบต่อทีมก่อน","ประเมินความเสี่ยงอย่างละเอียด"] },
+  { q: "Q04. เมื่อมีเป้าหมายที่ท้าทาย", options: ["แข่งขันกับเป้าหมายอย่างจริงจัง","กระตุ้นคนรอบตัวให้ตื่นเต้นไปด้วย","ค่อย ๆ ทำอย่างต่อเนื่องจนสำเร็จ","วางแผนเป็นขั้นตอนก่อนลงมือ"] },
+  { q: "Q05. เมื่อเจอปัญหาที่ไม่เคยพบมาก่อน", options: ["ทดลองวิธีใหม่ทันที","หาแนวคิดจากคนอื่นมาประกอบ","ปรึกษาผู้มีประสบการณ์","วิเคราะห์สาเหตุของปัญหาก่อน"] },
+  { q: "Q06. เมื่อมีหลายงานเข้ามาพร้อมกัน", options: ["เลือกงานที่สำคัญที่สุดก่อน","ประสานงานกับคนที่เกี่ยวข้องทันที","ค่อย ๆ จัดการทีละเรื่อง","จัดลำดับความสำคัญอย่างเป็นระบบ"] },
+  { q: "Q07. ในที่ประชุม", options: ["ผลักดันให้เกิดข้อสรุป","แสดงความคิดเห็นอย่างกระตือรือร้น","รับฟังความคิดเห็นของทุกคน","ซักถามเพื่อให้เข้าใจครบถ้วน"] },
+  { q: "Q08. เมื่อต้องนำเสนอไอเดีย", options: ["เน้นผลลัพธ์และประโยชน์ที่ได้","ใช้ตัวอย่างและเรื่องเล่าให้คนสนใจ","เชื่อมโยงผลกระทบต่อทีม","ใช้ข้อมูลและหลักฐานสนับสนุน"] },
+  { q: "Q09. เมื่อไม่เห็นด้วยกับคนอื่น", options: ["พูดตรง ๆ ถึงมุมมองของตน","ใช้วิธีพูดคุยให้บรรยากาศผ่อนคลาย","พยายามรักษาความสัมพันธ์ไว้ก่อน","อธิบายด้วยเหตุผลและข้อเท็จจริง"] },
+  { q: "Q10. เมื่อได้รับคำถามที่ไม่คาดคิด", options: ["ตอบทันทีตามที่คิด","ใช้บทสนทนาเพื่อสำรวจความคิดของอีกฝ่าย","ใช้เวลาทำความเข้าใจคำถามก่อน","ตรวจสอบความถูกต้องก่อนตอบ"] },
+  { q: "Q11. เมื่อได้รับโอกาสพูดต่อหน้าคนจำนวนมาก", options: ["มุ่งสื่อสารประเด็นสำคัญให้ชัด","รู้สึกสนุกกับการสร้างปฏิสัมพันธ์","พูดในจังหวะที่คนฟังตามได้ง่าย","เตรียมเนื้อหาอย่างละเอียด"] },
+  { q: "Q12. เมื่อให้ Feedback กับเพื่อนร่วมงาน", options: ["บอกสิ่งที่ควรปรับปรุงอย่างตรงไปตรงมา","เริ่มจากจุดแข็งและสร้างกำลังใจ","ระวังความรู้สึกของอีกฝ่าย","ยกตัวอย่างพฤติกรรมที่สังเกตได้จริง"] },
+  { q: "Q13. บทบาทที่คุณมักเป็นในทีม", options: ["คนผลักดันให้งานเดินหน้า","คนสร้างพลังและบรรยากาศ","คนประสานงานให้ทุกคนร่วมมือกัน","คนตรวจสอบคุณภาพของงาน"] },
+  { q: "Q14. เมื่อเพื่อนร่วมงานต้องการความช่วยเหลือ", options: ["ช่วยหาทางแก้ปัญหาอย่างรวดเร็ว","เข้าไปพูดคุยและให้กำลังใจ","พร้อมช่วยเหลือเท่าที่ทำได้","ช่วยวิเคราะห์สาเหตุและทางเลือก"] },
+  { q: "Q15. เมื่อต้องทำงานกับคนที่แตกต่างจากคุณ", options: ["ปรับบทบาทเพื่อให้งานสำเร็จ","พยายามสร้างความสัมพันธ์ก่อน","ยอมรับความแตกต่างและปรับตัว","ทำความเข้าใจวิธีคิดของเขาก่อน"] },
+  { q: "Q16. เมื่อทีมมีความขัดแย้ง", options: ["ตัดสินใจเพื่อให้งานเดินต่อ","ลดความตึงเครียดของบรรยากาศ","หาจุดที่ทุกฝ่ายยอมรับได้","แยกข้อเท็จจริงออกจากอารมณ์"] },
+  { q: "Q17. คุณชอบทำงานในทีมที่", options: ["ตัดสินใจรวดเร็ว","เปิดกว้างและมีพลัง","ร่วมมือกันดีและไว้ใจกัน","มีระบบและความชัดเจน"] },
+  { q: "Q18. เมื่อมีสมาชิกใหม่เข้าทีม", options: ["มอบหมายเป้าหมายให้ชัด","ชวนเข้าร่วมกิจกรรมกับทีม","ช่วยให้เขาปรับตัวได้ง่ายขึ้น","อธิบายขั้นตอนและวิธีทำงาน"] },
+  { q: "Q19. เมื่อองค์กรประกาศการเปลี่ยนแปลง", options: ["สนใจผลลัพธ์ที่จะเกิดขึ้น","มองหาโอกาสใหม่ ๆ","คิดถึงผลกระทบต่อผู้คน","อยากทราบรายละเอียดและเหตุผล"] },
+  { q: "Q20. เมื่อต้องเรียนรู้สิ่งใหม่", options: ["เริ่มทดลองใช้งานทันที","แลกเปลี่ยนกับคนที่มีประสบการณ์","เรียนรู้ไปพร้อมกับคนอื่น","ศึกษาคู่มือหรือข้อมูลก่อน"] },
+  { q: "Q21. สภาพแวดล้อมการทำงานที่คุณชอบ", options: ["มีเป้าหมายชัดและท้าทาย","มีปฏิสัมพันธ์กับผู้คนมาก","มั่นคงและร่วมมือกันดี","เป็นระบบและมีมาตรฐาน"] },
+  { q: "Q22. เมื่อได้รับอิสระในการทำงาน", options: ["ชอบตัดสินใจเอง","ชอบมีโอกาสสร้างสรรค์สิ่งใหม่","ชอบทำงานร่วมกับคนที่ไว้ใจได้","ชอบกำหนดวิธีทำงานอย่างเป็นระบบ"] },
+  { q: "Q23. หากต้องเลือกระหว่าง \"เร็ว\" กับ \"ละเอียด\"", options: ["เลือกเร็วเพื่อให้งานเดินหน้า","เลือกสิ่งที่ช่วยสร้างโอกาสใหม่","เลือกทางที่ทุกคนทำงานร่วมกันได้ดี","เลือกความถูกต้องและคุณภาพ"] },
+  { q: "Q24. สิ่งที่ทำให้คุณภูมิใจที่สุดในการทำงาน", options: ["บรรลุเป้าหมายที่ยาก","สร้างแรงบันดาลใจให้ผู้อื่น","ช่วยให้ทีมประสบความสำเร็จ","ส่งมอบงานที่มีคุณภาพสูง"] }
 ];
 
-// A=D, B=I, C=S, D=C (for every question)
 const SCORE_MAP = ['D', 'I', 'S', 'C'];
 
 const DISC_INFO = {
-  D: {
-    name: "Dominance — ผู้นำ",
-    color: "#E74C3C",
-    bg: "#FEF0EF",
-    desc: "มุ่งมั่น กล้าตัดสินใจ ชอบความท้าทาย และขับเคลื่อนผลลัพธ์อย่างรวดเร็ว",
-    strengths: ["ตัดสินใจเด็ดขาด", "มุ่งเป้าหมาย", "รับมือแรงกดดันได้ดี", "ริเริ่มสิ่งใหม่"],
-    growth: ["ฟังความคิดเห็นผู้อื่นมากขึ้น", "ใช้เวลาวางแผนก่อนลงมือ"]
-  },
-  I: {
-    name: "Influence — ผู้สร้างแรงบันดาลใจ",
-    color: "#F39C12",
-    bg: "#FEF9EF",
-    desc: "กระตือรือร้น สร้างสัมพันธ์ได้ดี โน้มน้าวผู้อื่น และทำให้บรรยากาศทีมมีชีวิตชีวา",
-    strengths: ["สื่อสารได้ดี", "สร้างแรงบันดาลใจ", "ทำงานร่วมกับคนหลากหลายได้", "มองโลกในแง่ดี"],
-    growth: ["ติดตามงานให้ครบถ้วน", "ใส่ใจรายละเอียดมากขึ้น"]
-  },
-  S: {
-    name: "Steadiness — ผู้ประสานงาน",
-    color: "#27AE60",
-    bg: "#EEF9F3",
-    desc: "อดทน ใจเย็น ให้ความสำคัญกับทีม และสร้างความเสถียรภาพในองค์กร",
-    strengths: ["ฟังผู้อื่นอย่างตั้งใจ", "สร้างความไว้วางใจ", "ทำงานได้อย่างสม่ำเสมอ", "ประสานงานเก่ง"],
-    growth: ["แสดงความคิดเห็นตรง ๆ มากขึ้น", "ยืดหยุ่นรับมือกับการเปลี่ยนแปลง"]
-  },
-  C: {
-    name: "Conscientiousness — ผู้เชี่ยวชาญ",
-    color: "#2980B9",
-    bg: "#EBF4FB",
-    desc: "ละเอียดรอบคอบ วิเคราะห์เป็นระบบ ยึดมาตรฐานสูง และส่งมอบงานคุณภาพ",
-    strengths: ["วิเคราะห์ข้อมูลแม่นยำ", "ทำงานอย่างมีมาตรฐาน", "วางแผนรัดกุม", "แก้ปัญหาอย่างมีตรรกะ"],
-    growth: ["ตัดสินใจเร็วขึ้นในบางสถานการณ์", "สื่อสารผลงานให้ผู้อื่นรับรู้"]
-  }
+  D: { name: "Dominance — ผู้นำ", color: "#E74C3C", bg: "#FEF0EF", desc: "มุ่งมั่น กล้าตัดสินใจ ชอบความท้าทาย และขับเคลื่อนผลลัพธ์อย่างรวดเร็ว", strengths: ["ตัดสินใจเด็ดขาด","มุ่งเป้าหมาย","รับมือแรงกดดันได้ดี","ริเริ่มสิ่งใหม่"], growth: ["ฟังความคิดเห็นผู้อื่นมากขึ้น","ใช้เวลาวางแผนก่อนลงมือ"] },
+  I: { name: "Influence — ผู้สร้างแรงบันดาลใจ", color: "#F39C12", bg: "#FEF9EF", desc: "กระตือรือร้น สร้างสัมพันธ์ได้ดี โน้มน้าวผู้อื่น และทำให้บรรยากาศทีมมีชีวิตชีวา", strengths: ["สื่อสารได้ดี","สร้างแรงบันดาลใจ","ทำงานร่วมกับคนหลากหลายได้","มองโลกในแง่ดี"], growth: ["ติดตามงานให้ครบถ้วน","ใส่ใจรายละเอียดมากขึ้น"] },
+  S: { name: "Steadiness — ผู้ประสานงาน", color: "#27AE60", bg: "#EEF9F3", desc: "อดทน ใจเย็น ให้ความสำคัญกับทีม และสร้างความเสถียรภาพในองค์กร", strengths: ["ฟังผู้อื่นอย่างตั้งใจ","สร้างความไว้วางใจ","ทำงานได้อย่างสม่ำเสมอ","ประสานงานเก่ง"], growth: ["แสดงความคิดเห็นตรง ๆ มากขึ้น","ยืดหยุ่นรับมือกับการเปลี่ยนแปลง"] },
+  C: { name: "Conscientiousness — ผู้เชี่ยวชาญ", color: "#2980B9", bg: "#EBF4FB", desc: "ละเอียดรอบคอบ วิเคราะห์เป็นระบบ ยึดมาตรฐานสูง และส่งมอบงานคุณภาพ", strengths: ["วิเคราะห์ข้อมูลแม่นยำ","ทำงานอย่างมีมาตรฐาน","วางแผนรัดกุม","แก้ปัญหาอย่างมีตรรกะ"], growth: ["ตัดสินใจเร็วขึ้นในบางสถานการณ์","สื่อสารผลงานให้ผู้อื่นรับรู้"] }
 };
 
-let userName = '';
-let answers = new Array(24).fill(null);
-let currentQ = 0;
+let userName = '', answers = new Array(24).fill(null), currentQ = 0;
 
-function show(screenId) {
+function show(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(screenId).classList.add('active');
+  document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
 }
 
 function startQuiz() {
   const val = document.getElementById('name-input').value.trim();
-  if (!val) {
-    document.getElementById('name-warning').style.display = 'block';
-    return;
-  }
+  if (!val) { document.getElementById('name-warning').style.display = 'block'; return; }
   document.getElementById('name-warning').style.display = 'none';
   userName = val;
   answers = new Array(24).fill(null);
@@ -733,22 +263,19 @@ function renderQuestion() {
   document.getElementById('q-number').textContent = `คำถามที่ ${currentQ + 1}`;
   document.getElementById('q-counter').textContent = `${currentQ + 1} / ${QUESTIONS.length}`;
   document.getElementById('q-text').textContent = q.q;
-  document.getElementById('progress-fill').style.width = `${((currentQ) / QUESTIONS.length) * 100}%`;
-
+  document.getElementById('progress-fill').style.width = `${(currentQ / QUESTIONS.length) * 100}%`;
   const answered = answers.filter(a => a !== null).length;
   document.getElementById('answered-count').textContent = `ตอบแล้ว ${answered} / ${QUESTIONS.length}`;
-
   const list = document.getElementById('options-list');
   list.innerHTML = '';
   q.options.forEach((opt, i) => {
-    const keys = ['A', 'B', 'C', 'D'];
+    const keys = ['A','B','C','D'];
     const div = document.createElement('div');
     div.className = 'option' + (answers[currentQ] === i ? ' selected' : '');
     div.innerHTML = `<div class="option-key">${keys[i]}</div><div class="option-text">${opt}</div>`;
     div.onclick = () => selectAnswer(i);
     list.appendChild(div);
   });
-
   const isLast = currentQ === QUESTIONS.length - 1;
   document.getElementById('btn-next').textContent = isLast ? 'ดูผลลัพธ์ ✓' : 'ถัดไป →';
   document.getElementById('btn-prev').style.visibility = currentQ === 0 ? 'hidden' : 'visible';
@@ -757,68 +284,61 @@ function renderQuestion() {
 
 function selectAnswer(i) {
   answers[currentQ] = i;
-  document.querySelectorAll('.option').forEach((el, idx) => {
-    el.classList.toggle('selected', idx === i);
-  });
+  document.querySelectorAll('.option').forEach((el, idx) => el.classList.toggle('selected', idx === i));
   const answered = answers.filter(a => a !== null).length;
   document.getElementById('answered-count').textContent = `ตอบแล้ว ${answered} / ${QUESTIONS.length}`;
-
-  // Auto-advance after short delay if not last question
-  if (currentQ < QUESTIONS.length - 1) {
-    setTimeout(() => {
-      currentQ++;
-      renderQuestion();
-    }, 300);
-  }
+  if (currentQ < QUESTIONS.length - 1) setTimeout(() => { currentQ++; renderQuestion(); }, 300);
 }
 
 function nextOrSubmit() {
-  if (answers[currentQ] === null) {
+  if (answers[currentQ] === null) { document.getElementById('submit-warning').style.display = 'block'; return; }
+  document.getElementById('submit-warning').style.display = 'none';
+  if (currentQ < QUESTIONS.length - 1) { currentQ++; renderQuestion(); return; }
+  const unanswered = answers.filter(a => a === null).length;
+  if (unanswered > 0) {
     document.getElementById('submit-warning').style.display = 'block';
+    document.getElementById('submit-warning').textContent = `ยังมี ${unanswered} ข้อที่ยังไม่ได้ตอบ`;
+    currentQ = answers.indexOf(null);
+    renderQuestion();
     return;
   }
-  document.getElementById('submit-warning').style.display = 'none';
-
-  if (currentQ < QUESTIONS.length - 1) {
-    currentQ++;
-    renderQuestion();
-  } else {
-    const unanswered = answers.filter(a => a === null).length;
-    if (unanswered > 0) {
-      document.getElementById('submit-warning').style.display = 'block';
-      document.getElementById('submit-warning').textContent =
-        `ยังมี ${unanswered} ข้อที่ยังไม่ได้ตอบ กรุณาตอบให้ครบก่อนดูผลลัพธ์`;
-      // Go to first unanswered
-      currentQ = answers.indexOf(null);
-      renderQuestion();
-      return;
-    }
-    showResults();
-  }
+  showResults();
 }
 
-function prevQuestion() {
-  if (currentQ > 0) {
-    currentQ--;
-    renderQuestion();
-  }
+function prevQuestion() { if (currentQ > 0) { currentQ--; renderQuestion(); } }
+
+function saveToSheets(data) {
+  const statusEl = document.getElementById('save-status');
+  statusEl.style.display = 'block';
+  statusEl.className = 'save-status saving';
+  statusEl.textContent = '⏳ กำลังบันทึกผลลัพธ์...';
+
+  fetch(SHEETS_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    statusEl.className = 'save-status saved';
+    statusEl.textContent = '✅ บันทึกผลลัพธ์ลง Google Sheets เรียบร้อยแล้ว';
+  })
+  .catch(() => {
+    statusEl.className = 'save-status error';
+    statusEl.textContent = '⚠️ ไม่สามารถบันทึกได้ กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ต';
+  });
 }
 
 function showResults() {
-  // Tally scores
   const scores = { D: 0, I: 0, S: 0, C: 0 };
-  answers.forEach(a => {
-    if (a !== null) scores[SCORE_MAP[a]]++;
-  });
-
+  answers.forEach(a => { if (a !== null) scores[SCORE_MAP[a]]++; });
   const total = QUESTIONS.length;
   const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
   const topType = sorted[0][0];
   const info = DISC_INFO[topType];
 
   // Hero
-  const hero = document.getElementById('result-hero');
-  hero.innerHTML = `
+  document.getElementById('result-hero').innerHTML = `
     <div class="result-name">ผลการประเมินของ ${userName}</div>
     <div class="highlight-card" style="background:${info.bg}; margin-bottom:8px;">
       <div class="type-initial" style="color:${info.color}">${topType}</div>
@@ -837,18 +357,14 @@ function showResults() {
       <div class="score-row">
         <div class="score-label" style="color:${c}">${type}</div>
         <div class="score-bar-track">
-          <div class="score-bar-inner" style="background:${c}; width:${pct}%">
-            <span>${pct}%</span>
-          </div>
+          <div class="score-bar-inner" style="background:${c}; width:${pct}%"><span>${pct}%</span></div>
         </div>
         <div class="score-num">${score}</div>
-      </div>
-    `;
+      </div>`;
   });
 
-  // Profile detail cards
-  const detail = document.getElementById('profile-detail');
-  detail.innerHTML = `
+  // Profile cards
+  document.getElementById('profile-detail').innerHTML = `
     <div class="profile-card ${topType}-card" style="grid-column: 1 / -1;">
       <h4>${topType} — จุดแข็งของคุณ</h4>
       <ul>${info.strengths.map(s => `<li>${s}</li>`).join('')}</ul>
@@ -859,27 +375,24 @@ function showResults() {
     </div>
     <div class="profile-card" style="border-color:#ccc; background:#f9f9f9;">
       <h4 style="color:var(--muted)">คะแนนทั้งหมด</h4>
-      <ul>
-        ${sorted.map(([t, s]) => `<li><strong style="color:${DISC_INFO[t].color}">${t}</strong>: ${s} ข้อ (${Math.round(s/total*100)}%)</li>`).join('')}
-      </ul>
+      <ul>${sorted.map(([t, s]) => `<li><strong style="color:${DISC_INFO[t].color}">${t}</strong>: ${s} ข้อ (${Math.round(s/total*100)}%)</li>`).join('')}</ul>
     </div>
   `;
 
   show('screen-result');
+
+  // Save to Google Sheets
+  saveToSheets({ name: userName, D: scores.D, I: scores.I, S: scores.S, C: scores.C, dominant: topType });
 }
 
 function restart() {
-  userName = '';
-  answers = new Array(24).fill(null);
-  currentQ = 0;
+  userName = ''; answers = new Array(24).fill(null); currentQ = 0;
   document.getElementById('name-input').value = '';
+  document.getElementById('save-status').style.display = 'none';
   show('screen-name');
 }
 
-// Allow Enter key to start
-document.getElementById('name-input').addEventListener('keydown', e => {
-  if (e.key === 'Enter') startQuiz();
-});
+document.getElementById('name-input').addEventListener('keydown', e => { if (e.key === 'Enter') startQuiz(); });
 </script>
 </body>
 </html>
